@@ -1,0 +1,103 @@
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Link to the Chokokutai and Rubik Moonrocks fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <title>Tic-Tac-Toe</title>
+</head>
+  <body>
+
+    <img src="img/spaceship2.png" id="spaceShip2" onclick="playRandomSound()">
+    <!-- <img src="jup.png" id="jup" /> -->
+    <div class="circleT">
+    <!-- <img src="earth2.png" id="planetearth" /> -->
+    </div>
+
+    </div>
+    <img src="img/aship.png" id="aship" />
+    <!-- <img src="crazyp.png" id="moon" /> -->
+    <img src="img/purple.png" id="purple" />
+    <img src="img/glas.png" id="glas" alt="Toggle Borders" onclick="playClickSound3();"/>
+    <img src="img/warning.png" id="warning" alt="Toggle Styles" onclick="playClickSound2();"/>
+    <!-- <img src="area51.png" id="area51" /> -->
+    <img src="img/salien.png" id="salien" alt="Toggle Shadow" onclick="playClickSound(); toggleShadow()">
+    <!-- <button id="borderbut" onclick="toggleBorders()">👽</button> -->
+    <!-- <span id="purple2">WARNING!</span> -->
+    <audio id="background-music" muted autoplay loop>
+      <source src="sounds/TicTacToeSpace.mp3" type="audio/mpeg">
+    </audio>
+      <audio id="x-turn-sound" src="sounds/XPLAY.mp3" preload="auto"></audio>
+      <audio id="o-turn-sound" src="sounds/OPLAY.mp3" preload="auto"></audio>
+      <audio id="click-sound" src="sounds/coin.mp3"></audio>
+      <audio id="click-sound2" src="sounds/button1.mp3"></audio>
+      <audio id="click-sound3" src="sounds/button2.mp3"></audio>
+      <audio id="click-sound4" src="sounds/button3.mp3"></audio>
+      <audio id="click-sound5" src="sounds/button4.mp3"></audio>
+      <audio id="click-sound6" src="sounds/button5.mp3"></audio>
+      <audio id="click-sound7" src="sounds/button6.mp3"></audio>
+      <audio id="click-sound8" src="sounds/button7.mp3"></audio>
+      <audio id="vsComSound" src="sounds/FX1.mp3"></audio>
+      <audio id="vsUserSound" src="sounds/FX2.mp3"></audio>
+      <audio id="drawsound" src="sounds/FX3.mp3"></audio>
+      <audio id="winsound" src="sounds/FX4.mp3"></audio>
+      <audio id="humans1" src="sounds/FX5.mp3"></audio>
+      <audio id="humans2" src="sounds/FX6.mp3"></audio>
+      <audio id="humans3" src="sounds/FX7.mp3"></audio>
+      <audio id="humans4" src="sounds/FX8.mp3"></audio>
+      <audio id="humans5" src="sounds/FX9.mp3"></audio>
+    </audio>    
+    <div class="main"></div>
+    <div class="board" id="board">
+      <div class="cell" id="cell0" data-cell></div>
+      <div class="cell" id="cell1" data-cell></div>
+      <div class="cell" id="cell2" data-cell></div>
+      <div class="cell" id="cell3" data-cell></div>
+      <div class="cell" id="cell4" data-cell></div>
+      <div class="cell" id="cell5" data-cell></div>
+      <div class="cell" id="cell6" data-cell></div>
+      <div class="cell" id="cell7" data-cell></div>
+      <div class="cell" id="cell8" data-cell></div>
+    </div>
+    <div class="winning-message" id="winningMessage">
+
+      <img src="img/spaceship2.png" id="spaceShip2" />
+      <img src="img/alienv.png" id="alien1" />
+      <img src="img/alien2.png" id="alien2" />
+      <img id="earth" />
+      <img id="earth2" />
+      <img id="earth3" />
+      <img id="purple3" />
+      <div data-winning-message-text class="winning-message-text"></div>
+      <button id="restartButton">Restart</button>
+    </div>
+    <div class="user-or-computer" id="userOrComputer">
+        <div id="userVsCom">
+          <span>Human VS Alien</span>
+        </div>
+        <div id="userVsUser">
+          <span>Human VS Human</span>
+        </div>
+      </div>  
+    <div class="main-menu" id="mainMenu">
+      <div id="mainMenuButton">
+        <span>Main Menu</span>
+      </div>
+        <!-- <div id="fullscreen-button">🕹️🎮</div> -->
+                <div id="fullscreen-button">📽️</div>
+    </div>
+    </div>
+    <div class="sunmusic" id="musicsun">
+      <div id="mute-buttons">🕹️</div>
+      <div id="music-on-off">music</div>
+      <div id="on">on</div>
+      <div id="off">off</div>
+    </div>
+<div class="score" id="count-score">
+  <div id="score">score:</div>
+  <div id="score-x"></div>
+  <div id="score-o"></div>
+</div>
+  </body>
+</html>
