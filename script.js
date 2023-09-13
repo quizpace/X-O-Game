@@ -87,6 +87,26 @@ function toggleShadow() {
   });
 }
 
+// Initialize a variable to keep track of the filter state
+let isFilterApplied = false;
+
+function changeFilter() {
+  const salienElement = document.querySelector("#salien");
+
+  if (salienElement) {
+    if (isFilterApplied) {
+      // Remove the filter
+      salienElement.style.filter = "none";
+    } else {
+      // Apply the filter
+      salienElement.style.filter = "drop-shadow(0 0 0.65vmin #abfd1d)";
+    }
+
+    // Toggle the filter state
+    isFilterApplied = !isFilterApplied;
+  }
+}
+
 // JavaScript function to play the click sound
 function playClickSound() {
   const clickSound = document.getElementById("click-sound7");
@@ -159,8 +179,23 @@ function toggleSound() {
   clickSound.muted = isSoundMuted;
 
   // Toggle draw and win sounds independently
+  const drawSound = document.getElementById("drawsound");
+  const winSound = document.getElementById("winsound");
   drawSound.muted = isSoundMuted;
   winSound.muted = isSoundMuted;
+
+  // Toggle the additional sounds
+  const sound4 = document.getElementById("click-sound4");
+  const sound6 = document.getElementById("click-sound6");
+  const sound7 = document.getElementById("click-sound7");
+  const sound8 = document.getElementById("click-sound8");
+
+  sound4.muted = isSoundMuted;
+  sound6.muted = isSoundMuted;
+  sound7.muted = isSoundMuted;
+  sound8.muted = isSoundMuted;
+
+  // Toggle other elements as needed
 
   muteAllButton.innerHTML = isSoundMuted ? "📍" : "🕹️";
 }
@@ -337,7 +372,7 @@ function handleClick(e) {
   }
 }
 
-let matrix = ["", "", "", "", "", "", "", "", ""]; // Change from const to let
+let matrix = ["", "", "", "", "", "", "", "", ""];
 
 function resetMatrix() {
   matrix = ["", "", "", "", "", "", "", "", ""]; // Reassign the matrix
@@ -450,7 +485,7 @@ function endGame(draw) {
     cellElements.forEach((cell) => {
       cell.classList.add(drawCell);
     });
-    winningMessageTextElement.innerText = "Draw!";
+    winningMessageTextElement.innerText = "⚛︎DRAW⚛︎";
     alien1Element.classList.remove("show");
     setTimeout(() => {
       cellElements.forEach((cell) => {
